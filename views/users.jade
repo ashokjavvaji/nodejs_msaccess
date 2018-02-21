@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1='Available Users'
+  if(users)
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th ID
+          th First Name
+          th Last Name
+          th eMail ID
+          th Annual Pay
+      tbody
+        each user in users
+          tr
+            td #{user.ID}
+            td #{user.FirstName}
+            td #{user.LastName}
+            td #{user.eMailID}
+            td #{user.Salary}
